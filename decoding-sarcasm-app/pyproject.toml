@@ -1,0 +1,11 @@
+[project]
+name = "decoding-sarcasm-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "flask>=3.1.0",
+    "python-dotenv>=1.0.1",
+    "together>=1.3.4",
+]
