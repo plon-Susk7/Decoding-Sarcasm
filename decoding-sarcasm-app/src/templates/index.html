@@ -8,11 +8,11 @@
 <body>
     <h1>Upload Image and Text</h1>
     <form action="/" method="POST" enctype="multipart/form-data">
-        <label for="image_file">Select Image:</label>
-        <input type="file" name="image_file" id="image_file" accept="image/*" required><br><br>
+        <label for="image_file">Enter Image URL:</label>
+        <input type="text" name="image_url" id="image_url" required><br><br>
         
-        <label for="text_input">Enter Text:</label>
-        <input type="text" name="text_input" id="text_input" required><br><br>
+        <label for="text_input">Enter Image Caption:</label>
+        <input type="text" name="caption" id="caption" required><br><br>
         
         <button type="submit">Submit</button>
     </form>
