@@ -4,22 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flask Image and Text Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            padding: 20px 30px;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #333333;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #eaeaea;
+            border-radius: 4px;
+            color: #333333;
+        }
+    </style>
 </head>
 <body>
-    <h1>Upload Image and Text</h1>
-    <form action="/" method="POST" enctype="multipart/form-data">
-        <label for="image_file">Enter Image URL:</label>
-        <input type="text" name="image_url" id="image_url" required><br><br>
-        
-        <label for="text_input">Enter Image Caption:</label>
-        <input type="text" name="caption" id="caption" required><br><br>
-        
-        <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+        <h1>Upload Image and Text</h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <label for="image_url">Enter Image URL:</label>
+            <input type="text" name="image_url" id="image_url" placeholder="Enter URL here..." required>
+            
+            <label for="caption">Enter Image Caption:</label>
+            <input type="text" name="caption" id="caption" placeholder="Enter caption here..." required>
+            
+            <button type="submit">Submit</button>
+        </form>
 
-    {% if result %}
-        <h2>Results:</h2>
-        <p>{{ result }}</p>
-    {% endif %}
+        {% if result %}
+            <div class="results">
+                <h2>Results:</h2>
+                <p>{{ result }}</p>
+            </div>
+        {% endif %}
+    </div>
 </body>
 </html>
