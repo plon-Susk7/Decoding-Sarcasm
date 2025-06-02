@@ -1,7 +1,7 @@
 ## Dataset
 
 1. Get dataset from the following link : https://drive.google.com/file/d/1CR3JIvatybTm3J3ZqLpZ4npq7OyHtcZf/view
-2. Extract the dataset and save it in directory named images
+2. Extract the dataset and save it in directory named images.
 
 ## Generate Explanation
 
